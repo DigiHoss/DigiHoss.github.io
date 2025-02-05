@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/Favicon/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <div class="container">
+      <div class="image_container">
+        <img
+          src="/Image/Image_password_generator.png"
+          alt="Image_passeword_generator"
+          class="_image"
+        />
+      </div>
+      <div class="control_password_container">
+        <aside>
+          <h2>Password Control</h2>
+          <form>
+            <h4>Length</h4>
+            <hr />
+            <div>
+              <span id="rangeValue">10</span>
+              <input
+                type="range"
+                max="15"
+                min="1"
+                value="10"
+                step="1"
+                id="LengthValue"
+                oninput="updateValue(this.value)"
+              />
+            </div>
+            <h4>Characters</h4>
+            <hr />
+            <br />
+            <div class="checkbox_group">
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="Uppercase"
+                  checked
+                  class="Checkbox_input"
+                /><label for="Uppercase" class="checkbox_label"
+                  >Uppercase</label
+                >
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="Lowercase"
+                  checked
+                  class="Checkbox_input"
+                /><label for="Lowercase" class="checkbox_label"
+                  >Lowercase</label
+                >
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="Numbers"
+                  checked
+                  class="Checkbox_input"
+                /><label for="Numbers" class="checkbox_label">Numbers</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  id="Symbols"
+                  checked
+                  class="Checkbox_input"
+                /><label for="Symbols" class="checkbox_label">Symbols</label>
+              </div>
+            </div>
+          </form>
+        </aside>
+      </div>
+      <div class="displayed_password">
+        <span id="show_result">Ht&/=Ajq1091</span> <br />
+        <button type="button" onclick="copy()">Copy</button>
+        <button type="button" onclick="generate()">Generate</button>
+      </div>
+    </div>
+    <div class="footer_container">
+      <footer>
+        <ul>
+          <li>
+            <a
+              href="https://www.instagram.com/hou_ssam.el/profilecard/?igsh=a2Q4NTMzdHh2N2Fk"
+              target="_blank"
+              ><img
+                src="/icons/Instagram icon.png"
+                alt="Instagram_link"
+                class="social_icon"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/hossam-el-hamdi-b559252b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              ><img
+                src="/icons/Linkdeln icon.png"
+                alt="Linkdeln_link"
+                class="social_icon"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/DigiHoss" target="_blank"
+              ><img
+                src="/icons/Github icon.png"
+                alt="Github_link"
+                class="social_icon"
+            /></a>
+          </li>
+        </ul>
+        <div class="copyright_content">
+          &copy; <span>All rights are reserved</span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
